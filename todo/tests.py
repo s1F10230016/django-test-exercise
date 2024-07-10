@@ -4,10 +4,12 @@ from datetime import datetime
 from todo.models import Task
 # Create your tests here.
 
+
 class SampleTestCase(TestCase):
 
     def test_sample1(self):
         self.assertEqual(1 + 2, 3)
+
 
 class TaskModelTestCase(TestCase):
 
@@ -27,6 +29,7 @@ class TaskModelTestCase(TestCase):
         self.assertEqual(task.title, 'task2')
         self.assertFalse(task.completed)
         self.assertEqual(task.due_at, None)
+
 
 class TaskViewTestCase(TestCase):
 
