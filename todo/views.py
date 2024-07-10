@@ -3,6 +3,7 @@ from django.utils.timezone import make_aware
 from django.utils.dateparse import parse_datetime
 from todo.models import Task
 
+
 def index(request):
     if request.method == 'POST':
         task = Task(title=request.POST['title'],
@@ -15,4 +16,6 @@ def index(request):
     context = {
         'tasks': tasks
     }
-    return render(request, 'todo/index.html', context)  
+
+    return render(request, 'todo/index.html', context)
+                                                    
